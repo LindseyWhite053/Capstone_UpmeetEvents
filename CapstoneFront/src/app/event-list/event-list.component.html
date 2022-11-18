@@ -1,0 +1,26 @@
+<div>
+    <button>Add Event</button>
+    
+    <div *ngIf="!favoriteListVisible" >
+        <button (click)="showFavoriteList()">View Favorites</button>
+        <h1>Favorite Events</h1>
+        <div *ngFor="let e of TheList">
+            
+            <app-event-detail [event]="e" (update)="updateOne($event)"></app-event-detail>
+        </div>
+    </div>
+
+
+    <div *ngIf="favoriteListVisible">
+        <button (click)="showAll()">View All</button>
+        <h1>Favorite Events</h1>
+        <ng-container *ngFor="let e of TheList">
+            <ng-container *ngIf="e.favorite == true">
+
+                <app-event-detail [event]="e"></app-event-detail>
+
+            </ng-container>
+        </ng-container>
+    </div>
+
+</div>

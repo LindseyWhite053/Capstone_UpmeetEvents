@@ -1,0 +1,11 @@
+<div>
+    <h2>{{event.name}}</h2>
+    <p>Date and time: {{event.date}} {{event.time}}</p>
+    <ng-container *ngIf="detailsVisible">
+        <p>Location: {{event.location}} </p>
+        <p>Category: {{event.category}}</p>
+    </ng-container>
+    <p *ngIf="event.favorite">Favorited</p>
+    <button (click)="viewDetails()">Show Details</button>
+    <button (click)="favorite()">Favorite</button>
+</div>

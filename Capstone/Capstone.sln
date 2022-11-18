@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpmeetCapstoneAPI", "UpmeetCapstoneAPI\UpmeetCapstoneAPI.csproj", "{05D2E33A-F41C-42E7-A972-6F93A9905F61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05D2E33A-F41C-42E7-A972-6F93A9905F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D2E33A-F41C-42E7-A972-6F93A9905F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D2E33A-F41C-42E7-A972-6F93A9905F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D2E33A-F41C-42E7-A972-6F93A9905F61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02352993-8756-440F-9434-D812C80CC0F3}
+	EndGlobalSection
+EndGlobal
