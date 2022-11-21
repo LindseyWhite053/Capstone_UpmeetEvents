@@ -1,9 +1,21 @@
 <div>
-    <button>Add Event</button>
-    
+    <button (click)="addModeOn()">Add Event</button>
+    <div *ngIf="addMode">
+        <p>Name: <br/><input type="text" [(ngModel)]="newName"/></p>
+        <p>Location: <br/><input type="text"  [(ngModel)]="newLocation"/></p>
+        <p>Date: <br/><input type="text"  [(ngModel)]="newDate"/></p>
+        <p>Time: <br/><input type="text"  [(ngModel)]="newTime"/></p>
+        <p>Category: <br/><input type="text"  [(ngModel)]="newCategory"/></p>
+        <p><input type="checkbox"  [(ngModel)]="newFavorite"/> Favorite</p>
+        <button (click)="add()">Save</button>
+        <button (click)="cancel()">Cancel</button>
+    </div>
+
+
     <div *ngIf="!favoriteListVisible" >
+
         <button (click)="showFavoriteList()">View Favorites</button>
-        <h1>Favorite Events</h1>
+        <h1>All Events</h1>
         <div *ngFor="let e of TheList">
             
             <app-event-detail [event]="e" (update)="updateOne($event)"></app-event-detail>
@@ -17,7 +29,7 @@
         <ng-container *ngFor="let e of TheList">
             <ng-container *ngIf="e.favorite == true">
 
-                <app-event-detail [event]="e"></app-event-detail>
+                <app-event-detail [event]="e" (update)="updateOne($event)"></app-event-detail>
 
             </ng-container>
         </ng-container>
