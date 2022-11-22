@@ -1,0 +1,5 @@
+<h1>Favorites</h1>
+
+<div *ngFor="let fav of TheList">
+    <app-event-detail [event]="fav" (update)="updateOne($event)"></app-event-detail>
+</div>

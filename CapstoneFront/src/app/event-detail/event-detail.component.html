@@ -5,7 +5,9 @@
         <p>Location: {{event.location}} </p>
         <p>Category: {{event.category}}</p>
     </ng-container>
-    <p *ngIf="event.favorite">Favorited</p>
     <button (click)="viewDetails()">Show Details</button>
-    <button (click)="favorite()">Favorite</button>
+    <button (click)="favorite()" *ngIf="!event.favorite">Favorite</button>
+    <button (click)="favorite()" *ngIf="event.favorite">Unfavorite</button>
 </div>
+
+

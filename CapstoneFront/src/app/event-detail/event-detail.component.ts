@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Event } from '../event';
+import { EventService } from '../event.service';
+
 
 @Component({
   selector: 'app-event-detail',
@@ -22,9 +24,10 @@ export class EventDetailComponent implements OnInit {
 
   @Output() update: EventEmitter<Event> = new EventEmitter<Event>();
   
-  constructor() { }
+  constructor(private EventSrv: EventService) { }
 
   ngOnInit(): void {
+
   }
 
   favorite(){

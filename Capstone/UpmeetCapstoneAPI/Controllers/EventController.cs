@@ -42,5 +42,11 @@ namespace UpmeetCapstoneAPI.Controllers
         {
             DAL.Update(e);
         }
+
+        [HttpGet("favorites")]
+        public List<Event> GetFavorites()
+        {
+            return DAL.GetFavorites();
+        }
     }
 }

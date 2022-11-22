@@ -81,14 +81,4 @@ export class EventListComponent implements OnInit {
       this.cancel()
   }
 
-
-  showFavoriteList(){
-    this.favoriteListVisible = true;
-  }
-
-  showAll(){
-    this.favoriteListVisible = false;
-  }
-  
-
 }

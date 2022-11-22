@@ -1,4 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using MySql.Data.MySqlClient;
 
 namespace UpmeetCapstoneAPI.Models
@@ -7,6 +8,7 @@ namespace UpmeetCapstoneAPI.Models
     {
         public static MySqlConnection DB;
 
+        // Event Access Methods
         public static List<Event> GetAll()
         {
             return DB.GetAll<Event>().ToList();
@@ -32,6 +34,13 @@ namespace UpmeetCapstoneAPI.Models
         public static void Update(Event e)
         {
             DB.Update(e);
+        }
+
+        // Real all favorites 
+        // get /repair/favorites
+        public static List<Event> GetFavorites()
+        {
+            return DB.Query<Event>("select * from events where favorite = true").ToList();
         }
     }
 }
