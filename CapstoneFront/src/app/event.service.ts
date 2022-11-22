@@ -34,5 +34,9 @@ export class EventService {
   update(cb: any, e: Event){
     this.http.put('https://localhost:7086/Event', e).subscribe(cb);
   }
+
+  favorites (cb: any) {
+    this.http.get<Event[]>('https://localhost:7086/Event/Favorites').subscribe(cb);
+  }
   
 }
